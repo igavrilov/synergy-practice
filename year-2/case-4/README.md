@@ -67,3 +67,22 @@
 - **InSales** и **1C-Битрикс: Управление сайтом** — идеальные решения для компаний, занимающихся электронной коммерцией, и тех, кто хочет создать и управлять интернет-магазином или веб-сайтом.
 
 Каждая из этих систем предоставляет возможности для автоматизации и оптимизации бизнес-процессов, улучшения взаимодействия с клиентами и повышения общей эффективности компании.
+
+## Приложение
+Созданное приложение представляет собой конвертер валют, состоящий из бэкенда на FastAPI и фронтенда на Vue.js. Бэкенд обрабатывает запросы на конвертацию валют, используя данные о курсах из базы данных SQLite. Фронтенд предоставляет удобный пользовательский интерфейс, позволяющий вводить данные для конвертации и получать результат.
+
+<img width="375" alt="Screenshot 2024-07-28 at 11 25 18" src="https://github.com/user-attachments/assets/51fccc06-6ca9-4bc0-a7f2-8afb2f63b7e9">
+
+```sql
+CREATE TABLE IF NOT EXISTS "exchange_rate" (
+	"currency"	VARCHAR NOT NULL,
+	"rate"	NUMERIC(10, 3) NOT NULL,
+	PRIMARY KEY("currency")
+);
+INSERT INTO "exchange_rate" VALUES ('USD',1);
+INSERT INTO "exchange_rate" VALUES ('RUR',85.901);
+INSERT INTO "exchange_rate" VALUES ('EUR',0.853);
+INSERT INTO "exchange_rate" VALUES ('JPY',110);
+INSERT INTO "exchange_rate" VALUES ('GBP',0.754);
+INSERT INTO "exchange_rate" VALUES ('AUD',1.352);
+```
